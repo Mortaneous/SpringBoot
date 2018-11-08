@@ -1,9 +1,11 @@
 package com.mortaneous.springboot.topic;
 
-import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,17 +13,26 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/topics")
 public class TopicController {
 
+	@Autowired
+	private TopicService topicService;
+
 	@GetMapping
 	public List<Topic> getAllTopics() {
-		return Arrays.asList(
-				new Topic("java", "Java", "All about Java"),
-				new Topic("cpp", "C++", "Everything C++"),
-				new Topic("html", "HTML", "HTML pages")
-		);
+		return topicService.getAllTopics();
+	}
+
+	@PostMapping
+	public String createTopic() {
+		return "<under construction>";
+	}
+
+	@GetMapping("/{id}")
+	public Topic getTopic(String id) {
+		return new Topic("aTopic", "A Topic", "topic topic");
 	}
 	
-	@GetMapping("/id")
-	public Topic getTopic() {
-		return new Topic("aTopic", "A Topic", "topic topic");
+	@PutMapping("/{id}")
+	public String updateTopic(String id) {
+		return "<under construction>";
 	}
 }
