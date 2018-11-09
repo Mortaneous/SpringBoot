@@ -1,4 +1,4 @@
-package com.mortaneous.springboot;
+package com.mortaneous.springboot.courseapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

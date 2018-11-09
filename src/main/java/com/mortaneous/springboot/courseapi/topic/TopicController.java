@@ -1,4 +1,4 @@
-package com.mortaneous.springboot.topic;
+package com.mortaneous.springboot.courseapi.topic;
 
 import java.util.List;
 
