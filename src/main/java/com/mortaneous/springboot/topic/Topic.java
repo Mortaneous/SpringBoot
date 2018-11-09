@@ -18,24 +18,27 @@ public class Topic {
 		return id;
 	}
 
-	public void setId(String id) {
+	public Topic setId(String id) {
 		this.id = id;
+		return this;
 	}
 
 	public String getTitle() {
 		return title;
 	}
 
-	public void setTitle(String title) {
+	public Topic setTitle(String title) {
 		this.title = title;
+		return this;
 	}
 
 	public String getDescription() {
 		return description;
 	}
 
-	public void setDescription(String description) {
+	public Topic setDescription(String description) {
 		this.description = description;
+		return this;
 	}
 
 }
