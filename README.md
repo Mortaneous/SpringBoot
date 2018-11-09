@@ -1,2 +1,3 @@
-# SpringBoot
-my spring boot laboratory
+# course-api
+
+RESTful Webservice
