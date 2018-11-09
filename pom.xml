@@ -4,7 +4,7 @@
 	<artifactId>course-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Course API</name>
-	<description>My first spring boot (practice) app</description>
+	<description>Course API - REST interface</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
