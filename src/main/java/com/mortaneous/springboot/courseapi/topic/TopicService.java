@@ -21,7 +21,9 @@ public class TopicService {
 
 	/* Read */
 	public Topic getTopic(String id) {
-		return findTopic(id);
+		return topics.stream()
+				.filter(t -> t.getId().equals(id))
+				.findFirst().get();
 	}
 	
 	/* Read (All) */
@@ -31,12 +33,9 @@ public class TopicService {
 	
 	/* Update */
 	public Topic updateTopic(Topic topic) {
-		Topic listTopic = findTopic(topic.getId());
-		if(listTopic != null) {
-			listTopic.setTitle(topic.getTitle())
-					 .setDescription(topic.getDescription());
-		}
-		return listTopic;
+		return getTopic(topic.getId())
+				.setTitle(topic.getTitle())
+				.setDescription(topic.getDescription());
 	}
 	
 	/* Delete */
