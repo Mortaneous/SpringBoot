@@ -51,7 +51,7 @@ public class TopicService {
 	
 	private Topic findTopic(String id) {
 		return topics.stream().filter(
-				(Topic t) -> id.equals(t.getId())
+				t -> id.equals(t.getId())
 		).findFirst().get();
 	}
 }
