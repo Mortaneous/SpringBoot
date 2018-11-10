@@ -40,17 +40,9 @@ public class TopicService {
 	
 	/* Delete */
 	public Topic deleteTopic(String id) {
-		Topic topic = findTopic(id);
-		if(topic != null) {
-			topics.remove(topic);
-		}
-		
+		Topic topic = getTopic(id);
+		topics.removeIf(t -> t.getId().equals(id));
 		return topic;
 	}
 	
-	private Topic findTopic(String id) {
-		return topics.stream().filter(
-				t -> id.equals(t.getId())
-		).findFirst().get();
-	}
 }
